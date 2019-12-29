@@ -3,7 +3,7 @@ const formData = [
         id: 1,
         stepTitle: 'Welcome',
         stepTitleShort: 'W',
-        stepContent: 'Grab your new card!',
+        stepContent: 'Your new card',
         questionText: 'A payment card for your everyday banking needs!',
     },
     {
@@ -38,8 +38,8 @@ const formData = [
         id: 6,
         stepTitle: 'Summary',
         stepTitleShort: 'S',
-        stepContent: 'Summary yay!',
-        questionText: 'Did you know that blah blah is blah blah? Summary!',
+        stepContent: 'Review',
+        questionText: 'Please review data before submitting this form.',
     },
 ];
 

@@ -9,7 +9,7 @@
             <div class="question-heading">{{formData[step].questionText}}</div>
             <div class="question-input-container">
                 <keep-alive>
-                    <component :is="dynamicComponent"></component>
+                    <component :is="dynamicComponent" v-bind:inputData = 'inputData'></component>
                 </keep-alive>
             </div>
             <div v-if="errorMessageToggle" class="error">{{error}}</div>
@@ -24,7 +24,6 @@
 
 
 <script>
-    /* eslint-disable no-console */
     import formData from '../assets/data/formData';
     import { bus } from '../main'
 
@@ -33,10 +32,13 @@
         components: {},
         data: () => ({
             formData,
-            step: 0,
-            finalStepIndex: 1,
             error: '',
             errorMessageToggle: false,
+            step: 0,
+            finalStepIndex: 1,
+            inputData: {
+                pickedCardType: 'Debit',
+            },
         }),
 
         methods: {
@@ -57,7 +59,7 @@
                 }
             },
             submitForm() {
-                alert('Your form has been submitted, probably...');
+                alert('Your form has been submitted. Somewhere. Probably.');
             },
         },
 
@@ -68,26 +70,29 @@
 
         updated:
             function () {
-                bus.$on('AddError', (data) => {
+                bus.$on('SetError', (data) => {
                     this.error = data.error;
                     this.errorMessageToggle = data.toggle;
-                    // eslint-disable-next-line no-console
-                    console.log('Error changed to: ' + this.error)
                 });
-                return this.error;
+                bus.$on('SetCardType', (data) => {
+                    this.inputData.pickedCardType = data;
+                });
+
             },
 
         computed: {
             dynamicComponent() {
+                //TODO replace with switch
                 let component = "";
                 if (this.step === 0) {
                     component = "QuestionIntro";
                 } else if (this.step === this.finalStepIndex) {
                     component = "QuestionSummary";
+                } else if (this.step === 2) {
+                    component = 'Question' + this.step + this.inputData.pickedCardType;
                 } else {
                     component = 'Question' + this.step;
                 }
-                console.log('dynamiccomp error: ', this.error);
                 return () => import(`../components/FormQuestions/${component}.vue`);
             },
             isError() {
