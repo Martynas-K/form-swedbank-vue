@@ -31,6 +31,10 @@ export default {
 };
 </script>
 
+<!--<style>-->
+<!--  @import './assets/styles/yourstyles.css';-->
+<!--</style>-->
+
 <style>
   * {
     box-sizing: border-box;
@@ -50,8 +54,7 @@ export default {
     flex-flow: column;
     height: 100%;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px 10px 70px 10px;
+    padding: 10px 10px 60px 10px;
   }
 
 </style>

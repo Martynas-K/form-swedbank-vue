@@ -21,8 +21,8 @@
 
 <script>
     /* eslint-disable no-console */
-
     import formData from '../assets/formData';
+    import { bus } from '../main'
     import Question1 from "./Question1";
 
     export default {
@@ -37,9 +37,11 @@
         methods: {
             prev() {
                 this.step--;
+                bus.$emit('ChangeStep', this.step);
             },
             next() {
                 this.step++;
+                bus.$emit('ChangeStep', this.step);
             },
             submit() {
                 alert('Submit to blah and show blah and etc.');
@@ -57,7 +59,6 @@
     }
 
     .form-wrapper {
-        overflow: auto;
         height: 100%;
         min-height: 400px;
         width: 100%;
@@ -67,10 +68,9 @@
 
     .step-header-container {
         display: flex;
-        /*box-sizing: border-box;*/
         height: 40px;
         width: 100%;
-        min-width: 325px;
+        min-width: 250px;
         border-radius: 20px;
         border: solid #f4ba44 2px;
         font-weight: bold;
@@ -80,7 +80,6 @@
     .step-header-title {
         display: flex;
         justify-content: center;
-        /*padding-left: 10px;*/
         line-height: 32px;
         height: 100%;
         width: 120px;
@@ -98,7 +97,10 @@
     }
 
     .question-text {
+        display: flex;
         padding: 20px;
+        min-height: 80px;
+        align-items: center;
         color: #512b2b;
         font-weight: bold;
     }
@@ -107,8 +109,9 @@
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
+        align-items: center;
         width: 100%;
-        height: 40px;
+        height: 80px;
         padding: 20px;
         color: #ffffff;
         font-weight: bold;
@@ -131,7 +134,7 @@
 
     .question-input-container {
         width: 100%;
-        height: 200px;
+        height: 300px;
         background-color: burlywood;
     }
 
