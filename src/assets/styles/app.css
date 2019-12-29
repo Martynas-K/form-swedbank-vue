@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: sans-serif;
+}
+
+.page-container {
+    position: relative;
+    height: 100%;
+    min-height: 100vh;
+    background-color: #fbf2ea;
+    /*user-select: none;*/
+}
+
+.form-container {
+    margin: auto;
+    height: 100%;
+    max-width: 1200px;
+    padding: 10px 10px 60px 10px;
+}

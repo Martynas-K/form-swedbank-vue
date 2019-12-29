@@ -1,10 +1,10 @@
 const formData = [
     {
         id: 1,
-        stepTitle: 'Intro',
-        stepTitleShort: 'I',
-        stepContent: 'Welcome text!',
-        questionText: 'Did you know that blah blah is blah blah? Yes it is!',
+        stepTitle: 'Welcome',
+        stepTitleShort: 'W',
+        stepContent: 'Grab your new card!',
+        questionText: 'A card for your everyday banking needs!',
     },
     {
         id: 2,

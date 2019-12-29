@@ -31,30 +31,6 @@ export default {
 };
 </script>
 
-<!--<style>-->
-<!--  @import './assets/styles/yourstyles.css';-->
-<!--</style>-->
-
 <style>
-  * {
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    font-family: sans-serif;
-  }
-
-  .page-container {
-    position: relative;
-    height: 100%;
-    min-height: 100vh;
-  }
-
-  .form-container {
-    display: flex;
-    flex-flow: column;
-    height: 100%;
-    max-width: 1200px;
-    padding: 10px 10px 60px 10px;
-  }
-
+  @import "./assets/styles/app.css";
 </style>
