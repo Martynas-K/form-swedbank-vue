@@ -1,5 +1,6 @@
 <template>
     <div class="form-wrapper">
+<!--        <form @submit="checkForm">-->
         <form>
             <div class="step-header-container">
                 <div class="step-header-title">{{formData[step].stepTitle}}</div>
@@ -11,10 +12,11 @@
                     <component :is="dynamicComponent"></component>
                 </keep-alive>
             </div>
+            <div v-if="errorMessageToggle" class="error">{{error}}</div>
             <div class="buttons-container">
                 <button class="btn" v-if="step !== finalStepIndex" @click.prevent="next()">Next</button>
-                <button class="btn" v-if="step === finalStepIndex" @click.prevent="submit()">Submit</button>
-                <button class="btn" v-if="step > 0" @click.prevent="prev()">Previous</button>
+                <button class="btn" v-if="step === finalStepIndex && !isError" @click.prevent="submitForm()">Submit</button>
+                <button class="btn btn-flex" v-if="step > 0" @click.prevent="prev()">Previous</button>
             </div>
         </form>
     </div>
@@ -28,34 +30,55 @@
 
     export default {
         name: "FormTemplate",
-        // components: {},
+        components: {},
         data: () => ({
             formData,
             step: 0,
             finalStepIndex: 1,
+            error: '',
+            errorMessageToggle: false,
         }),
 
         methods: {
             prev() {
-                this.step--;
-                bus.$emit('ChangeStep', this.step);
+                if (!this.error) {
+                    this.step--;
+                    bus.$emit('ChangeStep', this.step);
+                } else {
+                    this.errorMessageToggle = true;
+                }
             },
             next() {
-                this.step++;
-                bus.$emit('ChangeStep', this.step);
+                if (!this.error) {
+                    this.step++;
+                    bus.$emit('ChangeStep', this.step);
+                } else {
+                    this.errorMessageToggle = true;
+                }
             },
-            submit() {
-                alert('Submit to blah and show blah and etc.');
+            submitForm() {
+                alert('Your form has been submitted, probably...');
             },
         },
+
         created:
             function () {
                 return this.finalStepIndex = formData.length - 1;
             },
 
+        updated:
+            function () {
+                bus.$on('AddError', (data) => {
+                    this.error = data.error;
+                    this.errorMessageToggle = data.toggle;
+                    // eslint-disable-next-line no-console
+                    console.log('Error changed to: ' + this.error)
+                });
+                return this.error;
+            },
+
         computed: {
             dynamicComponent() {
-                console.log('sadsdsaasdsd', this.step)
                 let component = "";
                 if (this.step === 0) {
                     component = "QuestionIntro";
@@ -64,9 +87,12 @@
                 } else {
                     component = 'Question' + this.step;
                 }
-
+                console.log('dynamiccomp error: ', this.error);
                 return () => import(`../components/FormQuestions/${component}.vue`);
             },
+            isError() {
+                return !!this.error;
+            }
         }
     }
 </script>

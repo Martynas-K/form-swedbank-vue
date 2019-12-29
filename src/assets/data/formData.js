@@ -4,14 +4,14 @@ const formData = [
         stepTitle: 'Welcome',
         stepTitleShort: 'W',
         stepContent: 'Grab your new card!',
-        questionText: 'A card for your everyday banking needs!',
+        questionText: 'A payment card for your everyday banking needs!',
     },
     {
         id: 2,
         stepTitle: 'Step 1',
         stepTitleShort: '1',
-        stepContent: 'Question 1!',
-        questionText: 'Did you know that blah blah is blah blah? 1!',
+        stepContent: 'Type of card',
+        questionText: 'Which type of payment card is best for you?',
     },
     {
         id: 3,

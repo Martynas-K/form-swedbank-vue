@@ -12,16 +12,21 @@
             <li class="list">Book and pay for hotels and use car rental services.</li>
         </ul>
         <div class="text-wrapper">
-            <p>Please click <b><i>next</i></b> to fill out this form and start using your card!</p>
+            <p>Please click <b><i>next</i></b> to fill out this form and choose the best payment card for you!</p>
         </div>
+
 
     </div>
 </template>
 
 <script>
     export default {
-        name: "QuestionIntro"
+        name: "QuestionIntro",
+        data: () => ({
+            error: '',
+        }),
     }
+
 </script>
 
 <style scoped>
