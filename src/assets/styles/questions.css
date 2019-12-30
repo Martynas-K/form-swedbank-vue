@@ -6,32 +6,19 @@
     line-height: 1.7rem;
 }
 
-.text-wrapper {
-    margin: 20px 5px;
-}
+.text-wrapper { margin: 20px 5px; }
 
-.radio-wrapper  {
-    margin: 20px 10px 20px;
-}
+.radio-wrapper  { margin: 20px 10px 20px; }
 
-.select-wrapper {
-    margin: 0 0 10px;
-}
+.select-wrapper { margin: 0 0 10px; }
 
-.input-wrapper {
-    padding: 0;
-}
+.input-wrapper { padding: 0; }
 
-.input-wrapper p {
-    padding: 10px 0;
-}
-.radio-wrapper label {
-    padding-left: 10px;
-}
+.input-wrapper p { padding: 10px 0; }
 
-.text-input {
-    padding: 20px 20px;
-}
+.radio-wrapper label { padding-left: 10px; }
+
+.text-input { padding: 20px 20px; }
 
 .description {
     font-size: 14px;
@@ -57,31 +44,20 @@
 
 
 @media only screen and (min-width: 425px) {
-
     .question-wrapper {
         padding: 10px 40px 40px;
         min-height: 350px;
     }
 
-    .text-wrapper {
-        margin: 20px 0;
-    }
+    .text-wrapper { margin: 20px 0; }
 
-    .input-wrapper {
-        padding: 0 20px;
-    }
+    .input-wrapper { padding: 0 20px; }
 
-    .description {
-        padding-left: 40px;
-    }
+    .description { padding-left: 40px; }
 
-    .radio-wrapper {
-        margin: 20px 40px 20px;
-    }
+    .radio-wrapper { margin: 20px 40px 20px; }
 
-    .description {
-        font-size: 16px;
-    }
+    .description { font-size: 16px; }
 
     .select, .text-input{
         min-height: 40px;

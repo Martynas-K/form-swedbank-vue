@@ -53,5 +53,5 @@
 </script>
 
 <style scoped>
-    @import "../../assets/styles/question1_2.css";
+    @import "../../assets/styles/questions.css";
 </style>

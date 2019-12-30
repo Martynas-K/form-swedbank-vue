@@ -1,7 +1,6 @@
 <template>
     <div class="question-wrapper">
         <div class="text-wrapper">Please select your card delivery method: </div>
-
         <div class="select-wrapper">
             <select class="select" id="country" name="country" v-model="pickedDeliveryType">
                 <option value="" disabled selected>Select your option...</option>
@@ -16,7 +15,6 @@
         <div v-show="pickedDeliveryType" class="text-wrapper">You have selected the card to be delivered <b>{{ pickedDeliveryType }}</b>. Please click
             <b><i>next</i></b> for the final step of this form!.
         </div>
-
     </div>
 </template>
 
@@ -48,6 +46,5 @@
 </script>
 
 <style scoped>
-    @import "../../assets/styles/question1_2.css";
-
+    @import "../../assets/styles/questions.css";
 </style>

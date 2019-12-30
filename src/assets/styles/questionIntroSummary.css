@@ -5,31 +5,19 @@
     line-height: 1.7rem;
 }
 
-
-.text-wrapper {
-    margin: 20px 10px;
-}
+.text-wrapper { margin: 20px 10px; }
 
 .list {
     padding-left: 10px;
     list-style: '\2714';
 }
 
-.ul {
-    padding-left: 20px;
-}
+.ul { padding-left: 20px; }
 
 @media only screen and (min-width: 425px) {
+    .ul { padding-left: 40px; }
 
-    .ul {
-        padding-left: 40px;
-    }
+    .question-wrapper { padding: 10px 40px; }
 
-    .question-wrapper {
-        padding: 10px 40px;
-    }
-
-    .text-wrapper {
-        margin: 20px 0;
-    }
+    .text-wrapper { margin: 20px 0;}
 }

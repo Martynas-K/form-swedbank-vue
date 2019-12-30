@@ -70,8 +70,10 @@
                 this.errorMessageToggle =
                     this.enteredFirstName && this.enteredLastName &&
                     (this.pickedDebitAccount || (this.pickedCardOrganisation && this.enteredSalary)) ? '' : true;
+
                 this.error = this.enteredFirstName && this.enteredLastName &&
                     (this.pickedDebitAccount || (this.pickedCardOrganisation && this.enteredSalary)) ? '' : 'Please fill all fields';
+
                 bus.$emit('SetError', {'error': this.error, 'toggle': this.errorMessageToggle});
                 bus.$emit('SetFirstName', this.enteredFirstName);
                 bus.$emit('SetLastName', this.enteredLastName);
@@ -83,5 +85,5 @@
 </script>
 
 <style scoped>
-
+    @import "../../assets/styles/questions.css";
 </style>

@@ -13,13 +13,10 @@
             <li v-if="inputData.pickedCardType === 'Credit'" class="list">Your monthly salary after taxes: {{inputData.enteredSalary}}</li>
             <li v-if="inputData.pickedCreditCardType" class="list">Type of your credit card: {{inputData.pickedCreditCardType}}</li>
             <li class="list">Type of delivery: {{inputData.pickedDeliveryType}}</li>
-
         </ul>
         <div class="text-wrapper">
             <p>Please click <b><i>submit</i></b> to send this form. We will soon be in touch with you!</p>
         </div>
-
-
     </div>
 </template>
 
@@ -27,14 +24,9 @@
     export default {
         name: "QuestionSummary",
         props: ['inputData'],
-        data: () => ({
-
-        }),
-
     }
 </script>
 
 <style scoped>
     @import "../../assets/styles/questionIntroSummary.css";
-
 </style>

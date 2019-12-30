@@ -40,11 +40,10 @@
                 this.error = this.pickedDebitCardRole ? '' : 'Please fill all fields';
                 bus.$emit('SetError', {'error': this.error, 'toggle': this.errorMessageToggle});
                 bus.$emit('SetDebitCardRole', this.pickedDebitCardRole);
-
             },
     }
 </script>
 
 <style scoped>
-    @import "../../assets/styles/question1_2.css";
+    @import "../../assets/styles/questions.css";
 </style>

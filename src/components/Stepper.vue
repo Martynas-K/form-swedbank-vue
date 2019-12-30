@@ -18,6 +18,7 @@
             formData,
             step: 0,
         }),
+
         created:
             function () {
             bus.$on('ChangeStep', (data) => {
@@ -26,12 +27,12 @@
                 console.log('Step changed to: ' + this.step)
             })
         },
+
         methods: {
             getActiveStepperClass(id) {
                 return this.step === id - 1 ? 'stepper-active' : '';
             }
         }
-
     }
 </script>
 

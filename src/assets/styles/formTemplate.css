@@ -78,9 +78,7 @@
     outline: none;
 }
 
-.btn-flex {
-    float: left;
-}
+.btn-flex { float: left; }
 
 .btn:hover {
     background-color: #ee7023;
@@ -102,10 +100,7 @@
         font-size: 18px;
     }
 
-
-    .step-header-container {
-        font-size: 18px;
-    }
+    .step-header-container { font-size: 18px; }
 
     .buttons-container {
         padding: 20px 40px;
@@ -118,7 +113,5 @@
         width: 170px;
     }
 
-    .error {
-        padding: 30px 40px;
-    }
+    .error { padding: 30px 40px; }
 }

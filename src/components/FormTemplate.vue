@@ -21,7 +21,6 @@
     </div>
 </template>
 
-
 <script>
     import formData from '../assets/data/formData';
     import { bus } from '../main'

@@ -14,19 +14,13 @@
         <div class="text-wrapper">
             <p>Please click <b><i>next</i></b> to fill out this form and choose the best payment card for you!</p>
         </div>
-
-
     </div>
 </template>
 
 <script>
     export default {
         name: "QuestionIntro",
-        data: () => ({
-            error: '',
-        }),
     }
-
 </script>
 
 <style scoped>
