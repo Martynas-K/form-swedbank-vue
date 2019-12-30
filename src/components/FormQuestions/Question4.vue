@@ -12,8 +12,8 @@
                 <option value="at Panevėžys branch">Panevėžys, SomeBank's branch Street 5</option>
             </select>
         </div>
-        <div v-show="pickedDeliveryType" class="text-wrapper">You have selected the card to be delivered <b>{{ pickedDeliveryType }}</b>. Please click
-            <b><i>next</i></b> for the final step of this form!.
+        <div v-show="pickedDeliveryType" class="text-wrapper">You have selected the card to be delivered <b>{{ pickedDeliveryType }}.</b>
+            Please click <b><i>next</i></b> for the final step of this form!
         </div>
     </div>
 </template>

@@ -23,8 +23,6 @@
             function () {
             bus.$on('ChangeStep', (data) => {
                 this.step = data;
-                // eslint-disable-next-line no-console
-                console.log('Step changed to: ' + this.step)
             })
         },
 
