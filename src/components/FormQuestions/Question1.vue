@@ -8,14 +8,10 @@
             <input type="radio" id="credit" value="Credit" v-model="pickedCardType">
             <label for="credit">Credit card</label>
             <br>
-
         </div>
         <div v-show="pickedCardType" class="text-wrapper">You have selected a <b>{{ pickedCardType }} card</b>. Please click
             <b><i>next</i></b> to continue.
         </div>
-
-
-
     </div>
 </template>
 
@@ -43,11 +39,12 @@
                 bus.$emit('SetError', {'error': this.error, 'toggle': this.errorMessageToggle});
                 bus.$emit('SetCardType', this.pickedCardType);
 
+                if (this.pickedCardType === 'Credit') { bus.$emit('SetDebitCardRole', '') }
+                if (this.pickedCardType === 'Debit') { bus.$emit('SetCreditCardType', '') }
             },
-
         }
 </script>
 
 <style scoped>
-    @import "../../assets/styles/question1.css";
+    @import "../../assets/styles/question1_2.css";
 </style>

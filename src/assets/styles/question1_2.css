@@ -10,11 +10,17 @@
 }
 
 .radio-wrapper {
-    margin: 20px 40px 20px;
+    margin: 20px 10px 20px;
 }
 
 .radio-wrapper label {
     padding-left: 10px;
+}
+
+.description {
+    font-size: 14px;
+    padding-left: 20px;
+    font-style: italic;
 }
 
 
@@ -26,5 +32,17 @@
 
     .text-wrapper {
         margin: 20px 0;
+    }
+
+    .description {
+        padding-left: 40px;
+    }
+
+    .radio-wrapper {
+        margin: 20px 40px 20px;
+    }
+
+    .description {
+        font-size: 16px;
     }
 }

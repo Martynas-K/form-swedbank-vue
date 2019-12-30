@@ -1,6 +1,5 @@
 <template>
     <div class="form-wrapper">
-<!--        <form @submit="checkForm">-->
         <form>
             <div class="step-header-container">
                 <div class="step-header-title">{{formData[step].stepTitle}}</div>
@@ -37,7 +36,9 @@
             step: 0,
             finalStepIndex: 1,
             inputData: {
-                pickedCardType: 'Debit',
+                pickedCardType: '',
+                pickedDebitCardRole: '',
+                pickedCreditCardType: '',
             },
         }),
 
@@ -74,10 +75,9 @@
                     this.error = data.error;
                     this.errorMessageToggle = data.toggle;
                 });
-                bus.$on('SetCardType', (data) => {
-                    this.inputData.pickedCardType = data;
-                });
-
+                bus.$on('SetCardType', (data) => { this.inputData.pickedCardType = data; });
+                bus.$on('SetDebitCardRole', (data) => { this.inputData.pickedDebitCardRole = data; });
+                bus.$on('SetCreditCardType', (data) => { this.inputData.pickedCreditCardType = data; });
             },
 
         computed: {

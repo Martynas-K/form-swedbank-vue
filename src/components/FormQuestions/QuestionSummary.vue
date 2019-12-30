@@ -5,6 +5,8 @@
         </div>
         <ul class="ul">
             <li class="list">Type of payment card: {{inputData.pickedCardType}}</li>
+            <li v-if="inputData.pickedDebitCardRole" class="list">Role of your debit card: {{inputData.pickedDebitCardRole}}</li>
+            <li v-if="inputData.pickedCreditCardType" class="list">Type of your credit card: {{inputData.pickedCreditCardType}}</li>
 
         </ul>
         <div class="text-wrapper">
