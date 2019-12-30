@@ -17,5 +17,11 @@
     margin: auto;
     height: 100%;
     max-width: 1200px;
-    padding: 10px 30px 60px;
+    padding: 10px 10px 60px;
+}
+
+@media only screen and (min-width: 425px) {
+    .form-container {
+        padding: 10px 30px 60px;
+    }
 }

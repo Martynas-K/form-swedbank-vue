@@ -30,5 +30,5 @@
 </script>
 
 <style scoped>
-    @import "../../assets/styles/questionIntro.css";
+    @import "../../assets/styles/questionIntroSummary.css";
 </style>

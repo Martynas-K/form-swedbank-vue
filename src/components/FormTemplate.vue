@@ -39,6 +39,10 @@
                 pickedCardType: '',
                 pickedDebitCardRole: '',
                 pickedCreditCardType: '',
+                pickedDeliveryType: '',
+                enteredFirstName: '',
+                enteredLastName: '',
+                pickedDebitAccount: '',
             },
         }),
 
@@ -60,7 +64,7 @@
                 }
             },
             submitForm() {
-                alert('Your form has been submitted. Somewhere. Probably.');
+                alert('Your form has been submitted! Somewhere. Probably...');
             },
         },
 
@@ -78,6 +82,13 @@
                 bus.$on('SetCardType', (data) => { this.inputData.pickedCardType = data; });
                 bus.$on('SetDebitCardRole', (data) => { this.inputData.pickedDebitCardRole = data; });
                 bus.$on('SetCreditCardType', (data) => { this.inputData.pickedCreditCardType = data; });
+                bus.$on('SetDeliveryType', (data) => { this.inputData.pickedDeliveryType = data; });
+                bus.$on('SetFirstName', (data) => { this.inputData.enteredFirstName = data; });
+                bus.$on('SetLastName', (data) => { this.inputData.enteredLastName = data; });
+                bus.$on('SetDebitAccount', (data) => { this.inputData.pickedDebitAccount = data; });
+                bus.$on('SetCardOrganisation', (data) => { this.inputData.pickedCardOrganisation = data; });
+                bus.$on('SetSalary', (data) => { this.inputData.enteredSalary = data; });
+
             },
 
         computed: {

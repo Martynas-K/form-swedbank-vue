@@ -22,7 +22,8 @@
         <div v-show="pickedCreditCardType" class="text-wrapper">You have selected a <b>{{ pickedCreditCardType }} card</b>. Please click
             <b><i>next</i></b> to continue.
         </div>
-    </div></template>
+    </div>
+</template>
 
 <script>
     import { bus } from '../../main';

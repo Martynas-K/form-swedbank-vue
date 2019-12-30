@@ -1,20 +1,36 @@
 .question-wrapper {
     padding: 10px;
     height: 100%;
+    min-height: 300px;
     color: #512b2b;
     line-height: 1.7rem;
 }
 
 .text-wrapper {
-    margin: 20px 10px;
+    margin: 20px 5px;
 }
 
-.radio-wrapper {
+.radio-wrapper  {
     margin: 20px 10px 20px;
 }
 
+.select-wrapper {
+    margin: 0 0 10px;
+}
+
+.input-wrapper {
+    padding: 0;
+}
+
+.input-wrapper p {
+    padding: 10px 0;
+}
 .radio-wrapper label {
     padding-left: 10px;
+}
+
+.text-input {
+    padding: 20px 20px;
 }
 
 .description {
@@ -23,15 +39,36 @@
     font-style: italic;
 }
 
+.select, .text-input{
+    padding: 5px 15px;
+    width: 100%;
+    min-height: 30px;
+    font-size: 12px;
+    background-color: #fbf2ea;
+    border-radius: 20px;
+    border: #ee7023 2px solid;
+    outline: none;
+}
+
+.select option {
+    border-radius: 20px;
+    border: #ee7023 2px solid;
+}
+
 
 @media only screen and (min-width: 425px) {
 
     .question-wrapper {
-        padding: 10px 40px;
+        padding: 10px 40px 40px;
+        min-height: 350px;
     }
 
     .text-wrapper {
         margin: 20px 0;
+    }
+
+    .input-wrapper {
+        padding: 0 20px;
     }
 
     .description {
@@ -43,6 +80,11 @@
     }
 
     .description {
+        font-size: 16px;
+    }
+
+    .select, .text-input{
+        min-height: 40px;
         font-size: 16px;
     }
 }
